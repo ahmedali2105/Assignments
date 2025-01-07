@@ -1,0 +1,164 @@
+## LIST ASSIGNMENT
+
+1. Program to print alternate elements of a list:
+python
+
+# Accepting list from the user
+user_list = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+# Printing alternate elements of the list
+alternate_elements = user_list[::2]
+print("Alternate elements of the list:", alternate_elements)
+
+2. Program to reverse the list without using the reverse() method:
+python
+
+# Accepting list from the user
+user_list = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+# Reversing the list manually
+reversed_list = user_list[::-1]
+print("Reversed list:", reversed_list)
+
+3. Program to find and display the largest number in a list without using max():
+python
+
+# Accepting list from the user
+user_list = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+# Finding the largest number
+largest_number = user_list[0]
+for num in user_list:
+    if num > largest_number:
+        largest_number = num
+
+print("Largest number in the list:", largest_number)
+
+4. Program to rotate the list so that the last element moves to the first index:
+python
+
+# Accepting list from the user
+user_list = list(map(int, input("Enter a list of numbers separated by spaces: ").split()))
+
+# Rotating the list
+rotated_list = [user_list[-1]] + user_list[:-1]
+print("Rotated list:", rotated_list)
+
+5. Program to delete a given word from a string:
+python
+
+# Accepting input string and word to delete
+input_string = input("Enter a string: ")
+word_to_delete = input("Enter the word to delete: ")
+
+# Deleting the word from the string
+new_string = ' '.join([word for word in input_string.split() if word != word_to_delete])
+print("String after deleting the word:", new_string)
+
+6. Program to convert a date from mm/dd/yyyy to Month dd, yyyy format:
+python
+
+# Importing datetime module
+import datetime
+
+# Accepting date input
+date_string = input("Enter the date in mm/dd/yyyy format: ")
+
+# Converting the date
+date_obj = datetime.datetime.strptime(date_string, "%m/%d/%Y")
+formatted_date = date_obj.strftime("%B %d, %Y")
+
+print("Formatted date:", formatted_date)
+
+7. Program to capitalize each word in a string:
+python
+
+# Accepting input string
+input_string = input("Enter a string: ")
+
+# Capitalizing each word
+capitalized_string = ' '.join([word.capitalize() for word in input_string.split()])
+print("String with capitalized words:", capitalized_string) 
+
+8. Program to find the sum of each row of a matrix:
+python
+
+# Accepting matrix size and elements from the user
+m = int(input("Enter number of rows: "))
+n = int(input("Enter number of columns: "))
+
+matrix = []
+for i in range(m):
+    row = list(map(int, input(f"Enter row {i+1} elements: ").split()))
+    matrix.append(row)
+
+# Calculating and printing sum of each row
+for i in range(m):
+    row_sum = sum(matrix[i])
+    print(f"Sum of row {i+1} = {row_sum}") 
+
+9. Program to add two matrices:
+python
+
+# Accepting matrix size and elements from the user
+m = int(input("Enter number of rows: "))
+n = int(input("Enter number of columns: "))
+
+matrix1 = []
+matrix2 = []
+
+# Accepting first matrix
+print("Enter elements for the first matrix:")
+for i in range(m):
+    row = list(map(int, input(f"Enter row {i+1} elements: ").split()))
+    matrix1.append(row)
+
+# Accepting second matrix
+print("Enter elements for the second matrix:")
+for i in range(m):
+    row = list(map(int, input(f"Enter row {i+1} elements: ").split()))
+    matrix2.append(row)
+
+# Adding matrices
+result_matrix = [[matrix1[i][j] + matrix2[i][j] for j in range(n)] for i in range(m)]
+
+print("Resultant matrix after addition:")
+for row in result_matrix:
+    print(row)
+10. Program to multiply two matrices:
+python
+                  
+# Accepting matrix size and elements from the user
+m = int(input("Enter number of rows: "))
+n = int(input("Enter number of columns: "))
+
+matrix1 = []
+matrix2 = []
+
+# Accepting first matrix
+print("Enter elements for the first matrix:")
+for i in range(m):
+    row = list(map(int, input(f"Enter row {i+1} elements: ").split()))
+    matrix1.append(row)
+
+# Accepting second matrix
+print("Enter elements for the second matrix:")
+for i in range(n):
+    row = list(map(int, input(f"Enter row {i+1} elements: ").split()))
+    matrix2.append(row)
+
+# Matrix multiplication
+result_matrix = [[sum(matrix1[i][k] * matrix2[k][j] for k in range(n)) for j in range(n)] for i in range(m)]
+
+print("Resultant matrix after multiplication:")
+for row in result_matrix:
+    print(row)
+
+                      
+
+
+
+
+                               
+
+                       
