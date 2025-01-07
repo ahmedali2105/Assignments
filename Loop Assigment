@@ -1,0 +1,143 @@
+1. Print the numbers from 1 to 10 using a for loop:
+# Using a for loop to print numbers from 1 to 10
+for i in range(1, 11):
+    print(i)
+
+2. Print the numbers from 20 to 1 using a while loop:
+# Using a while loop to print numbers from 20 to 1
+i = 20
+while i >= 1:
+    print(i)
+    i -= 1
+
+3. Print even numbers from 1 to 10:
+# Using a for loop to print even numbers from 1 to 10
+for i in range(2, 11, 2):
+    print(i)
+
+4. Prompt the user to enter a number n and print all numbers from 1 to n:
+# Accepting a number from the user
+n = int(input("Enter a number: "))
+
+# Printing numbers from 1 to n
+for i in range(1, n+1):
+    print(i)
+
+
+5. Prompt the user to enter a number n, and print all odd numbers between 1 and n:
+# Accepting a number from the user
+n = int(input("Enter a number: "))
+
+# Printing odd numbers between 1 and n
+for i in range(1, n+1, 2):
+    print(i)
+
+6. Print 'Happy Birthday!' five times:
+# Using a for loop to print 'Happy Birthday!' five times
+for _ in range(5):
+    print("Happy Birthday!")
+
+
+7. Generate the first n terms of the series formed by squaring the natural numbers:
+# Accepting a number n from the user
+n = int(input("Enter a number: "))
+
+# Generating and printing the first n terms of the series
+print(f"The first {n} terms of the series are:")
+for i in range(1, n+1):
+    print(i**2, end=" ")
+
+
+8. Print the multiplication table of a number:
+# Accepting a number from the user
+num = int(input("Enter a number: "))
+
+# Printing the multiplication table of the number
+for i in range(1, 11):
+    print(f"{num} x {i} = {num*i}")
+
+9. Print the first 8 terms of an arithmetic progression starting with 3 and a common difference of 4:
+# First term and common difference
+first_term = 3
+common_difference = 4
+
+# Printing the first 8 terms of the arithmetic progression
+for i in range(8):
+    term = first_term + i * common_difference
+    print(term, end=" ")
+
+10. Print the first 6 terms of a geometric sequence starting with 2 and a common ratio of 3:
+# First term and common ratio
+first_term = 2
+common_ratio = 3
+
+# Printing the first 6 terms of the geometric sequence
+for i in range(6):
+    term = first_term * (common_ratio ** i)
+    print(term, end=" ")
+
+11. Calculate the sum of all integers from 1 to a number entered by the user:
+# Accepting a positive integer from the user
+n = int(input("Enter a positive integer: "))
+
+# Calculating the sum of integers from 1 to n
+sum_total = 0
+for i in range(1, n+1):
+    sum_total += i
+
+print(f"The sum of all integers from 1 to {n} is: {sum_total}")
+
+12. Calculate the sum of the reciprocals of all numbers from 1 to N:
+# Accepting a positive integer N from the user
+N = int(input("Enter a positive integer: "))
+
+# Calculating the sum of reciprocals
+sum_reciprocal = 0
+for i in range(1, N+1):
+    sum_reciprocal += 1 / i
+
+print(f"The sum of reciprocals from 1 to {N} is: {sum_reciprocal:.2f}")
+
+13. Repeating number input and accumulating the running total:
+# Initialize the running total
+running_total = 0
+
+# Repeating the process 5 times
+for _ in range(5):
+    num = int(input("Enter a number: "))
+    running_total += num
+
+print(f"The final running total is: {running_total}")
+
+14. Calculate the factorial of a positive integer:
+# Accepting a positive integer from the user
+n = int(input("Enter a positive integer: "))
+
+# Calculating the factorial
+if n < 0:
+    print("Factorial does not exist for negative numbers.")
+elif n == 0:
+    print("The factorial of 0 is 1.")
+else:
+    factorial = 1
+    for i in range(1, n+1):
+        factorial *= i
+    print(f"The factorial of {n} is: {factorial}")
+
+15. Calculate the power of a base to an exponent without using the exponentiation operator:
+# Accepting base and exponent from the user
+base = int(input("Enter the base number: "))
+exponent = int(input("Enter the exponent: "))
+
+# Calculating the power using a loop
+if exponent < 0:
+    result = 1 / base
+    for _ in range(1, abs(exponent)):
+        result /= base
+else:
+    result = 1
+    for _ in range(exponent):
+        result *= base
+
+print(f"{base} raised to the power of {exponent} is: {result}")
+
