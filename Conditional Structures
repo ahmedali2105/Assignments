@@ -1,0 +1,228 @@
+1. Program to check if a number is even or odd:
+
+ 
+# Accepting a number from the user
+num = int(input("Enter a number: "))
+
+# Checking if the number is even or odd
+if num % 2 == 0:
+    print(f"{num} is Even.")
+else:
+    print(f"{num} is Odd.")
+
+
+2. Program to check if a person is eligible to vote:
+
+# Accepting age from the user
+age = int(input("Enter your age: "))
+
+# Checking eligibility to vote
+if age >= 18:
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote yet.")
+
+3. Program to find the largest of two integers:
+
+# Accepting two integers from the user
+num1 = int(input("Enter first integer: "))
+num2 = int(input("Enter second integer: "))
+
+# Finding and printing the largest number
+if num1 > num2:
+    print(f"The largest number is {num1}.")
+elif num2 > num1:
+    print(f"The largest number is {num2}.")
+else:
+    print("Both numbers are equal.")
+
+4. Program to check if a number is positive, negative, or zero:
+
+
+# Accepting a number from the user
+num = float(input("Enter a number: "))
+
+# Checking if the number is positive, negative, or zero
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+
+5. Program to categorize age into age groups:
+
+# Accepting age from the user
+age = int(input("Enter your age: "))
+
+# Categorizing based on age
+if 0 <= age <= 12:
+    print("Child")
+elif 13 <= age <= 19:
+    print("Teenager")
+elif 20 <= age <= 59:
+    print("Adult")
+else:
+    print("Senior Citizen")
+
+6. Program to display the corresponding day of the week:
+
+# Accepting a number from 1 to 7
+day_num = int(input("Enter a number from 1 to 7: "))
+
+# Displaying the corresponding day
+if day_num == 1:
+    print("Sunday")
+elif day_num == 2:
+    print("Monday")
+elif day_num == 3:
+    print("Tuesday")
+elif day_num == 4:
+    print("Wednesday")
+elif day_num == 5:
+    print("Thursday")
+elif day_num == 6:
+    print("Friday")
+elif day_num == 7:
+    print("Saturday")
+else:
+    print("Error: Invalid input. Please enter a number between 1 and 7.")
+
+7. Program to calculate BMI and classify:
+
+# Accepting weight and height from the user
+weight = float(input("Enter your weight (in kg): "))
+height = float(input("Enter your height (in meters): "))
+
+# Calculating BMI
+bmi = weight / (height * height)
+
+# Classifying BMI
+if bmi < 18.5:
+    print(f"BMI: {bmi:.2f} - Underweight")
+elif 18.5 <= bmi < 24.9:
+    print(f"BMI: {bmi:.2f} - Normal weight")
+elif 25 <= bmi < 29.9:
+    print(f"BMI: {bmi:.2f} - Overweight")
+else:
+    print(f"BMI: {bmi:.2f} - Obesity")
+
+8. Program to calculate the average and grade of marks:
+
+# Accepting marks from the user
+marks1 = float(input("Enter marks for subject 1: "))
+marks2 = float(input("Enter marks for subject 2: "))
+marks3 = float(input("Enter marks for subject 3: "))
+
+# Calculating average
+average = (marks1 + marks2 + marks3) / 3
+
+# Determining the grade
+if 90 <= average <= 100:
+    grade = 'A'
+elif 80 <= average < 90:
+    grade = 'B'
+elif 70 <= average < 80:
+    grade = 'C'
+elif 60 <= average < 70:
+    grade = 'D'
+else:
+    grade = 'F'
+
+print(f"Average: {average:.2f}, Grade: {grade}")
+
+
+9. Program to solve a quadratic equation:
+
+import math
+# Accepting coefficients from the user
+a = float(input("Enter coefficient a: "))
+b = float(input("Enter coefficient b: "))
+c = float(input("Enter coefficient c: "))
+
+# Calculating the discriminant
+discriminant = b**2 - 4*a*c
+
+# Checking the nature of the roots
+if discriminant > 0:
+    root1 = (-b + math.sqrt(discriminant)) / (2*a)
+    root2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print(f"Two real roots: {root1:.2f} and {root2:.2f}")
+elif discriminant == 0:
+    root = -b / (2*a)
+    print(f"One real root: {root:.2f}")
+else:
+    real_part = -b / (2*a)
+    imaginary_part = math.sqrt(-discriminant) / (2*a)
+    print(f"Two complex roots: {real_part:.2f} + {imaginary_part:.2f}i and {real_part:.2f} - {imaginary_part:.2f}i"
+
+10. Program to sort three numbers in ascending order:
+
+# Accepting three numbers from the user
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+num3 = int(input("Enter third number: "))
+
+# Sorting the numbers
+numbers = [num1, num2, num3]
+numbers.sort()
+
+print("Sorted numbers:", numbers)
+
+
+11. Program to find the largest of three integers:
+
+# Accepting three integers from the user
+num1 = int(input("Enter first integer: "))
+num2 = int(input("Enter second integer: "))
+num3 = int(input("Enter third integer: "))
+
+# Finding the largest number
+largest = max(num1, num2, num3)
+print(f"The largest number is {largest}.")
+
+
+12. Program to check if a character is vowel or consonant:
+
+# Accepting a character from the user
+char = input("Enter a character: ").lower()
+
+# Checking if the character is a vowel or consonant
+if char in 'aeiou':
+    print(f"{char} is a vowel.")
+else:
+    print(f"{char} is a consonant.")
+
+
+13. Program to check if a year is a leap year:
+
+# Accepting year from the user
+year = int(input("Enter a year: "))
+
+# Checking if the year is a leap year
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a Leap Year.")
+else:
+    print(f"{year} is NOT a Leap Year.")
+
+14. Program to calculate monthly telephone bills:
+
+# Accepting the number of calls from the user
+calls = int(input("Enter number of calls: "))
+
+# Calculating the bill
+if calls <= 100:
+    bill = 200
+elif 101 <= calls <= 150:
+    bill = 200 + (calls - 100) * 0.60
+elif 151 <= calls <= 200:
+    bill = 200 + 50 * 0.60 + (calls - 150) * 0.50
+else:
+    bill = 200 + 50 * 0.60 + 50 * 0.50 + (calls - 200) * 0.40
+
+print(f"Total monthly bill: Rs. {bill:.2f}")
+
+
+
+
