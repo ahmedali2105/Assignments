@@ -1,0 +1,189 @@
+##1. Check Discount Eligibility
+
+purchase_amount = float(input("Enter total purchase amount: "))
+if purchase_amount > 100:
+    final_price = purchase_amount * 0.9
+    print(f"Discount applied! Final price: ${final_price:.2f}")
+else:
+    print(f"Total price: ${purchase_amount:.2f}")
+
+
+##2. Calculate Bulk Discount
+items = int(input("Enter the number of items: "))
+total_price = float(input("Enter the total price: "))
+if items > 5:
+    total_price *= 0.85
+print(f"Total price after discount: ${total_price:.2f}")
+
+
+##3. Membership Discount
+is_member = input("Are you a member (yes/no)? ").strip().lower() == "yes"
+total_price = float(input("Enter total price: "))
+if is_member:
+    total_price *= 0.8
+else:
+    total_price *= 0.95
+print(f"Discounted price: ${total_price:.2f}")
+
+
+##4. Seasonal Sale
+is_holiday = input("Is today a holiday (yes/no)? ").strip().lower() == "yes"
+total_price = float(input("Enter total price: "))
+if is_holiday:
+    total_price *= 0.75
+else:
+    total_price *= 0.9
+print(f"Price after discount: ${total_price:.2f}")
+
+
+##5. Buy-One-Get-One-Free
+items_bought = int(input("Enter the number of items bought: "))
+if items_bought % 2 == 0:
+    items_to_pay_for = items_bought // 2
+else:
+    items_to_pay_for = items_bought
+print(f"Items to pay for: {items_to_pay_for}")
+
+
+##B. Tax Calculations
+##6. Sales Tax
+price = float(input("Enter the price of the item: "))
+if price > 500:
+    total_price = price * 1.15
+else:
+    total_price = price * 1.08
+print(f"Total price after tax: ${total_price:.2f}")
+
+
+##7. Income Tax
+income = float(input("Enter your annual income: "))
+if income > 50000:
+    tax = income * 0.2
+else:
+    tax = income * 0.1
+print(f"Tax to pay: ${tax:.2f}")
+
+
+##8. Tax Bracket
+income = float(input("Enter your annual income: "))
+if income < 30000:
+    print("Low Tax")
+elif income < 100000:
+    print("Medium Tax")
+else:
+    print("High Tax")
+
+
+##9. VAT Calculation
+is_essential = input("Is the item essential (yes/no)? ").strip().lower() == "yes"
+price = float(input("Enter the price of the item: "))
+if is_essential:
+    final_price = price * 1.05
+else:
+    final_price = price * 1.12
+print(f"Final price after VAT: ${final_price:.2f}")
+
+##10. Tax-Free Day
+tax_free = input("Is today a tax-free day (yes/no)? ").strip().lower() == "yes"
+price = float(input("Enter the price: "))
+if tax_free:
+    print(f"Original price: ${price:.2f}")
+else:
+    total_price = price * 1.07
+    print(f"Price after tax: ${total_price:.2f}")
+
+
+##C. Shopping and Billing
+#11. Free Shipping
+purchase_amount = float(input("Enter total purchase amount: "))
+if purchase_amount > 50:
+    print(f"Total amount (including shipping): ${purchase_amount:.2f}")
+else:
+    total_amount = purchase_amount + 5
+    print(f"Total amount (including $5 shipping): ${total_amount:.2f}")
+
+
+##12. Discount Code
+discount_code = input("Enter discount code: ")
+total_price = float(input("Enter total price: "))
+if discount_code == "DISCOUNT10":
+    total_price *= 0.9
+print(f"Total price after discount: ${total_price:.2f}")
+
+
+##13. Tiered Discounts
+total_price = float(input("Enter total price: "))
+if total_price <= 50:
+    discount = 0
+elif total_price <= 100:
+    discount = 0.1
+else:
+    discount = 0.2
+final_price = total_price * (1 - discount)
+print(f"Total price after discount: ${final_price:.2f}")
+
+
+##14. Minimum Purchase Requirement
+total_amount = float(input("Enter total amount: "))
+if total_amount < 20:
+    print("Minimum purchase of $20 is required.")
+else:
+    print(f"Total amount: ${total_amount:.2f}")
+
+
+##15. Loyalty Points
+is_loyal = input("Are you a loyal member (yes/no)? ").strip().lower() == "yes"
+purchase_amount = float(input("Enter purchase amount: "))
+loyalty_points = purchase_amount
+if is_loyal:
+    loyalty_points *= 2
+print(f"Loyalty points earned: {loyalty_points:.2f}")
+
+##D. Travel and Tickets
+##16. Travel Discount
+miles = float(input("Enter travel distance in miles: "))
+ticket_price = float(input("Enter ticket price: "))
+if miles > 500:
+    ticket_price *= 0.8
+print(f"Ticket price after discount: ${ticket_price:.2f}")
+
+##17. Child or Senior Discount
+age = int(input("Enter age: "))
+ticket_price = float(input("Enter ticket price: "))
+if age < 12 or age > 60:
+    ticket_price *= 0.85
+print(f"Ticket price after discount: ${ticket_price:.2f}")
+
+
+##18. Ticket Type Pricing
+is_weekend = input("Is the ticket for a weekend (yes/no)? ").strip().lower() == "yes"
+ticket_price = float(input("Enter ticket price: "))
+if is_weekend:
+    ticket_price *= 1.1
+print(f"Ticket price after surcharge: ${ticket_price:.2f}")
+
+##19. Baggage Fee
+baggage_weight = float(input("Enter total baggage weight in kg: "))
+if baggage_weight > 20:
+    extra_weight = baggage_weight - 20
+    baggage_fee = extra_weight * 10
+    print(f"Baggage fee: ${baggage_fee:.2f}")
+else:
+    print("No baggage fee.")
+    
+##20. Early Bird Discount
+days_in_advance = int(input("Enter number of days before booking: "))
+ticket_price = float(input("Enter ticket price: "))
+if days_in_advance > 30:
+    ticket_price *= 0.9
+print(f"Ticket price after early bird discount: ${ticket_price:.2f}")
+
+
+##E. Grades and Performance
+#21. Pass or Fail
+
+score = int(input("Enter student's score: "))
+if score >= 40:
+    print("Pass")
+else:
+    print("Fail")
